@@ -1,0 +1,60 @@
+:root {
+    --base-clr: rgb(65, 65, 65);
+    --text-clr: white;
+    --accent-clr: greenyellow;
+    --allert-clr: yellow;
+}
+body {
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    user-select: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+#Score {
+    font-size: 50px;
+    margin: 0;
+    padding: 13.5% 0%;
+}
+#level {
+    font-size: 30px;
+    position: relative;
+    bottom: -33%;
+}
+#Prestige{
+    font-size: 30px;
+    position: relative;
+    top: -32%;
+    margin-right: auto;
+}
+#Upgrade , #Auto {
+    display: block;
+}
+#UpgradeCost , #AutoCost , #Multiplyer , #Idle, #CPS {
+    color: var(--accent-clr);
+}
+.yellow {
+    color: var(--allert-clr);
+}
+body div {
+    display: flex;
+    gap: 20px;
+}
+body div div {
+    padding: 0px 30px;
+    display: flex;
+    gap: 30px;
+}
+body div div div {
+    display: block;
+}
+#Stats {
+    margin-left: auto;
+}
+#clickPerSec {
+    margin-left: auto;
+}

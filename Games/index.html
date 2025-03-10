@@ -1,0 +1,181 @@
+<html>
+    <head>
+
+        <Title>Clicker.io</Title>
+        <link rel="stylesheet" href="library/style.css">
+    </head><body id="Clicker01" onmouseover="Idle()">
+        <p id="Level">Level 1</p>
+        <p id="Score" onfocus="focus1"><strong>Score: 0.0</strong></p>
+        <p id="prestige" onclick="Prestige()"><strong>Prestige</strong></p>
+        <div>
+            <div>
+                <div id="Upgrade">
+                    <p><strong>Upgrade</strong></p>
+                    <p id="UpgradeCost" onclick="Upgrade()">Cost: 10</p>
+                </div>
+                <div id="Auto">
+                    <p><strong>Auto</strong></p>
+                    <p id="AutoCost" onclick="Auto()">Cost: 1</p>
+                </div>
+            </div>
+            <div id="clickPerSec">
+                <div>
+                    <p><strong>CPS</strong></p>
+                    <P id="CPS">0.0 /s</P>
+                </div>
+            </div>
+            <div id="Stats">
+                <div>
+                    <p><strong>Multiplyer</strong></p>
+                    <p id="Multiplyer">0.4x</p>
+                </div>
+                <div>
+                    <p><strong>Idle</strong></p>
+                    <p id="Idle">0.1x</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const Score = document.getElementById('Score')
+            const Level = document.getElementById('Level')
+            const upgrade = document.getElementById('UpgradeCost')
+            const auto = document.getElementById('AutoCost')
+            const Multiplyer = document.getElementById('Multiplyer')
+            const IdleS = document.getElementById('Idle')
+            const prestige = document.getElementById('prestige')
+            const CPS = document.getElementById('CPS')
+            let frame
+            let scoreNum = 0
+            let level = 1
+            let idle = false
+            let interval
+            let upgradeCost = 10
+            let autoCost = upgradeCost * 0.10
+            let per = 25
+            let multiplyer = (upgradeCost / per)
+            let idleMultiplyer = multiplyer / 3
+            let boostMultiplyer = 0
+            let boostIdle = 0
+            let currentPresteige = 0
+            let allowPresteige = false
+            let tempMultiplyer = 0
+            let tempBoostMultiplyer = 0
+            let tempIdle = 0
+            let tempBoostIdle = 0
+            let clicks = []
+
+            document.addEventListener("contextmenu", (event) => {
+                event.preventDefault()
+            })
+
+            document.addEventListener("click", () => {
+                scoreNum += multiplyer
+                clicks.push(Date.now())
+            })
+
+            frame = setInterval(() => { //                                  Frame 
+                Score.innerHTML = "Score: " + scoreNum.toFixed(1)
+                Score.style.fontWeight = "bold"
+                Level.innerHTML = "Level " + level
+                Multiplyer.innerHTML = (multiplyer + boostMultiplyer).toFixed(1) + "x"
+                IdleS.innerHTML = (idleMultiplyer + boostIdle).toFixed(1) + "x"
+
+                if (scoreNum < upgradeCost){
+                    upgrade.style.color = "red"
+                } else {
+                    upgrade.style.color = "greenyellow"
+                }
+                if (scoreNum < autoCost && boostIdle == 0){
+                    auto.style.color = "red"
+                } else if (boostIdle == 0) {
+                    auto.style.color = "greenyellow"
+                }
+            }, 100)
+            setInterval(updateCPS, 1000)
+
+            function updateCPS(){ //                                        CPS
+                let now = Date.now()
+                clicks = clicks.filter(t => now - t < 5000)
+                let cps = (clicks.length / 5).toFixed(1)
+                CPS.innerHTML = cps + " /s"
+            }
+            function Idle(){ //                                             Idle
+                if (!idle){
+                    idle = true
+                    interval = setInterval(() => {
+                        scoreNum += (idleMultiplyer + boostIdle + boostMultiplyer)
+                    }, 1000)
+                }
+            }
+            function Upgrade(){ //                                          Upgrade
+                if (scoreNum > upgradeCost){
+                    scoreNum = scoreNum - upgradeCost
+                    per += (per * 0.75)
+                    upgradeCost = upgradeCost * 5
+                    multiplyer = tempMultiplyer + (upgradeCost / per)
+                    idleMultiplyer = tempIdle + multiplyer / 3
+                    upgrade.innerHTML = "Cost: " + upgradeCost
+                    autoCost = upgradeCost * 0.10
+                    auto.innerHTML = "Cost: " + autoCost
+                    level += 1
+                    Level.innerHTML = "Level " + level
+                    temp = ((tempBoostMultiplyer + multiplyer * 5) * 6) * 10
+                    console.log(temp)
+                    if (temp < (upgradeCost / 3)){
+                        allowPresteige = true
+                        prestige.style.color = "greenyellow"
+                    }
+                }
+            }
+            function Auto(){ //                                             Auto
+                if (scoreNum > autoCost && boostIdle == 0.00){
+                    scoreNum -= autoCost
+                    autoCost = upgradeCost * 0.10
+                    boostMultiplyer = tempBoostMultiplyer + multiplyer * 5
+                    boostIdle = tempBoostIdle + multiplyer / 1.5
+                    IdleS.style.color = "yellow"
+                    IdleS.style.fontWeight = "bold"
+                    Multiplyer.style.color = "yellow"
+                    Multiplyer.style.fontWeight = "bold"
+                    auto.style.color = "grey"
+                    auto.style.fontWeight = "bold"
+                    setTimeout(() => {
+                        boostIdle = 0.01
+                        boostMultiplyer = 0.01
+                        IdleS.style.color = "greenyellow"
+                        IdleS.style.fontWeight = "normal"
+                        Multiplyer.style.color = "greenyellow"
+                        Multiplyer.style.fontWeight = "normal"
+                        setTimeout(() => {
+                            boostIdle = 0
+                            boostMultiplyer = 0
+                            auto.style.color = "greenyellow"
+                            auto.style.fontWeight = "normal"
+                        }, 10000)
+                    }, 10000)
+                    auto.innerHTML = "Cost: " + autoCost
+                }
+            }
+            function Prestige() { //                                        Prestige
+                if (allowPresteige == true) {
+                    allowPresteige = false
+                    currentPresteige += 1
+                    scoreNum = 0.0
+                    upgradeCost = 10
+                    per = 25
+                    level = 1
+                    autoCost = upgradeCost * 0.10
+                    tempMultiplyer = multiplyer
+                    tempBoostMultiplyer = boostMultiplyer
+                    tempIdle = idleMultiplyer
+                    tempBoostIdle = boostIdle
+                    prestige.style.color = "white"
+                    prestige.innerHTML = "Prestige " + currentPresteige
+                    prestige.style.fontWeight = "bold"
+                    upgrade.innerHTML = "Cost: " + upgradeCost
+                    auto.innerHTML = "Cost: " + autoCost
+                }
+            }
+        </script>
+    </body>
+</html>
