@@ -108,7 +108,7 @@ body {
     width: 80%;
     height: 80%;
     border: 2px solid var(--text-clr);
-    background-color: var(--text-clr);
+    background-color: var(white);
     color: black;
 }
 .TxtDoc, .Bro, .Game {
