@@ -1,6 +1,10 @@
 const contextMenu = document.getElementById('ContextMenu')
 const application = document.getElementById('Application')
 const game = document.getElementsByClassName('Game')
+const music = document.getElementById("Music")
+
+music.play()
+music.volume = 0.3
 
 document.addEventListener("contextmenu", (event) => {
     event.preventDefault()
@@ -21,6 +25,13 @@ document.getElementById("searchBar").addEventListener("keypress", function(event
         this.value = ""
     }
 });
+setInterval (() => {
+    if (music.ended) {
+        setTimeout(() => {
+            music.play()
+        }, 9000)
+    }
+}, 1000)
 
 function executeCommand(command) {
     if (command.startsWith("/bg")) {
@@ -29,6 +40,9 @@ function executeCommand(command) {
     } else if (command.startsWith("/fnt")) {
         let varColor = command.replace("/fnt", "").trim()
         changeFont(varColor)
+    } else if (command.startsWith("/msc.vol")) {
+        let varVolume = command.replace("/msc.vol", "").trim()
+        music.volume = varVolume
     } else {
         alert("Unknown command: " + command)
     }
@@ -41,6 +55,13 @@ function changeBackground(bgNumber) {
 }
 function changeFont(varColor){
     document.body.style.color = varColor
+}
+function BGM() {
+    if (music.paused) {
+        music.play()
+    } else {
+        music.pause()
+    }
 }
 function TextDocument() {
     application.style.display = "block"
