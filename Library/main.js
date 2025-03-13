@@ -35,16 +35,19 @@ setInterval (() => {
 
 function executeCommand(command) {
     if (command.startsWith("/bg")) {
-        let bgNumber = command.replace("/bg", "").trim()
-        changeBackground(bgNumber)
+        let bgNumber = command.replace("/bg", "").trim();
+        changeBackground(bgNumber);
     } else if (command.startsWith("/fnt")) {
-        let varColor = command.replace("/fnt", "").trim()
-        changeFont(varColor)
+        let varColor = command.replace("/fnt", "").trim();
+        changeFont(varColor);
     } else if (command.startsWith("/msc.vol")) {
-        let varVolume = command.replace("/msc.vol", "").trim()
-        music.volume = varVolume
+        let varVolume = command.replace("/msc.vol", "").trim();
+        music.volume = parseFloat(varVolume);
+    } else if (command.startsWith("/msc.c")) {
+        let trackNumber = command.replace("/msc.c", "").trim();
+        changeMusic(trackNumber);
     } else {
-        alert("Unknown command: " + command)
+        alert("Unknown command: " + command);
     }
 }
 function changeBackground(bgNumber) {
@@ -55,6 +58,11 @@ function changeBackground(bgNumber) {
 }
 function changeFont(varColor){
     document.body.style.color = varColor
+}
+function changeMusic(trackNumber) {
+    let Track = `Library/Audio/bgm ${trackNumber}.mp3`;
+    music.src = Track;
+    music.play();
 }
 function BGM() {
     if (music.paused) {
