@@ -30,9 +30,13 @@ body {
     position: relative;
     top: -32%;
     margin-right: auto;
+    cursor: pointer;
 }
 #Upgrade , #Auto {
     display: block;
+}
+#UpgradeCost , #AutoCost {
+    cursor: pointer;
 }
 #UpgradeCost , #AutoCost , #Multiplyer , #Idle, #CPS {
     color: var(--accent-clr);

@@ -42,6 +42,7 @@ function executeCommand(command) {
         changeFont(varColor);
     } else if (command.startsWith("/msc.vol")) {
         let varVolume = command.replace("/msc.vol", "").trim();
+        varVolume = varVolume/100
         music.volume = parseFloat(varVolume);
     } else if (command.startsWith("/msc.c")) {
         let trackNumber = command.replace("/msc.c", "").trim();
@@ -71,28 +72,19 @@ function BGM() {
         music.pause()
     }
 }
-function TextDocument() {
+function Exit() {
     application.style.display = "block"
+    document.querySelectorAll(".TxtDoc").forEach(el => {
+        el.style.display = "none"
+    });
     document.querySelectorAll(".Bro").forEach(el => {
         el.style.display = "none"
     });
     document.querySelectorAll(".Game").forEach(el => {
         el.style.display = "none"
     });
-    document.querySelectorAll(".TxtDoc").forEach(el => {
-        el.style.display = "block"
-    });
-}
-function Browser(){
-    application.style.display = "block"
-    document.querySelectorAll(".TxtDoc").forEach(el => {
+    document.querySelectorAll(".Folder").forEach(el => {
         el.style.display = "none"
-    });
-    document.querySelectorAll(".Game").forEach(el => {
-        el.style.display = "none"
-    });
-    document.querySelectorAll(".Bro").forEach(el => {
-        el.style.display = "block"
     });
 }
 function Close() {
@@ -107,15 +99,31 @@ function Close() {
         el.style.display = "none"
     });
 }
+function TextDocument() {
+    application.style.display = "block"
+    Exit()
+    document.querySelectorAll(".TxtDoc").forEach(el => {
+        el.style.display = "block"
+    });
+}
+function Browser(){
+    application.style.display = "block"
+    Exit()
+    document.querySelectorAll(".Bro").forEach(el => {
+        el.style.display = "block"
+    });
+}
 function Game() {
     application.style.display = "block"
-    document.querySelectorAll(".TxtDoc").forEach(el => {
-        el.style.display = "none"
-    });
-    document.querySelectorAll(".Bro").forEach(el => {
-        el.style.display = "none"
-    });
+    Exit()
     document.querySelectorAll(".Game").forEach(el => {
+        el.style.display = "block"
+    });
+}
+function Folder() {
+    application.style.display = "block"
+    Exit()
+    document.querySelectorAll(".Folder").forEach(el => {
         el.style.display = "block"
     });
 }

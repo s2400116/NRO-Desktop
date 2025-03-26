@@ -14,7 +14,7 @@
                 <img src="Library/Icon/Trash.png" alt="Trash" width="40px" height="40px">
                 <p>Trash</p>
             </div>
-            <div class="Folders">
+            <div class="Folders" ondblclick="Folder()">
                 <img src="Library/Icon/Folder.png" alt="Folder" width="40px" height="40px">
                 <p>Folder</p>
             </div>
@@ -41,6 +41,8 @@
                     <li>Delete</li>
                     <hr>
                     <li>Properties</li>
+                    <hr>
+                    <li>Show more options</li>
                 </ul>
             </div>
             <div id="Application">
@@ -52,6 +54,8 @@
                         <p class="Bro">Browser</p> 
                         <img src="Library/Icon/Game.png" class="Game" alt="Commands.txt" width="23px" height="23px">
                         <p class="Game">Game</p> 
+                        <img src="Library/Icon/Folder.png" class="Folder" alt="Folder" width="23px" height="23px">
+                        <p class="Folder">Folder</p> 
                     </nav>
                     <div>
                         <ul>
@@ -63,12 +67,14 @@
                 </div>
                 <iframe src="https://www.webcrawler.com/" frameborder="0" class="Bro"></iframe>
                 <iframe src="Games/index.html" frameborder="0" class="Game"></iframe>
+                <iframe src="Assignments/index.html" frameborder="0" class="Folder"></iframe>
                 <div id="AppBody">
                     <div class="TxtDoc">
                         <h1>Commands</h1>
                         <hr>
-                        <p><i>/bg 01 to 16</i></p>
-                        <p><i>/msc.vol 0.0 to 1.0</i></p>
+                        <p><i>/bg [01 to 16]</i></p>
+                        <p><i>/msc.c [unknown]</i></p>
+                        <p><i>/msc.vol [0 to 100]</i></p>
                         <p><i>/fnt [color]</i></p>
                         <p><strong>Extra Color Options: [var(x)]</strong><i> --base-clr, --hover-clr, --hover-clr2, --accent-clr or --text-clr</i></p>
                         <h1>Developer Commands???</h1>

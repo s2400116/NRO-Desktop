@@ -4,11 +4,6 @@
     --accent-clr: #ebebeb;
     --text-clr: #e6e6ef;
     --hover-clr2: rgba( 255, 255, 255, 0.15 );
-
-    --base-clr-g: rgb(65, 65, 65);
-    --text-clr-g: white;
-    --accent-clr-g: greenyellow;
-    --allert-clr-g: yellow;
 }
 
 body {
@@ -31,6 +26,7 @@ body {
     margin: 10px;
     text-align: center;
     align-items: center;
+    cursor: pointer;
 }
 .Folders p {
     margin-top: 5px;
@@ -88,6 +84,7 @@ body {
     display: flexbox;
 }
 #Taskbar div img {
+    cursor: pointer;
     padding-right: 1%;
 }
 #SearchBar {
@@ -108,7 +105,7 @@ body {
     width: 80%;
     height: 80%;
     border: 2px solid var(--text-clr);
-    background-color: var(--text-clr);
+    background-color: var(--hover-clr);
     color: black;
 }
 .TxtDoc, .Bro, .Game {
@@ -117,7 +114,7 @@ body {
 #AppHeader {
     padding: 5px;
     display: flex;
-    background-color: var(--hover-clr);
+    background-color: rgb(240, 240, 240);
 }
 #AppHeader nav {
     padding: 5px;
@@ -140,6 +137,7 @@ body {
     padding: 0;
 }
 #AppHeader div ul li {
+    cursor: pointer;
     padding-left: 10px;
 }
 #AppBody {
@@ -160,6 +158,7 @@ iframe {
 }
 #MusicPlayer {
     display: flex;
+    cursor: pointer;
     align-items: center;
     position: fixed;
     right: 1vh;
