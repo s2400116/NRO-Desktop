@@ -14,6 +14,13 @@ Version 1.03.00 – Folder System (Partial Implementation) - 27 March 2025
 3. 	Designed a structured layout for easy browsing of uploaded files.
 4. 	Work-in-progress: Full folder system to be completed in future updates.
 
+Version 1.03.01 – Music Player Expansion & UI Enhancements (4 April 2025)
+1. 	Added advanced Music Player controls: Skip Forward, Skip Back, Play, Pause, Repeat, and Volume.
+2. 	Introduced Folder Detail section for additional file/folder information.
+3. 	Added a CMD Console window for command-line-style interaction.
+4. 	Implemented a Notification Tab in the taskbar.
+5. 	General code improvements and optimizations.
+
 Planned Updates:
 -	Version 1.03.XX – Complete the Folder System.
 -	Version 1.0X.XX – Add the ability to run Python scripts and open hosted websites.

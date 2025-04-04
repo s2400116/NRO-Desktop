@@ -75,6 +75,7 @@
                         <p><i>/bg [01 to 16]</i></p>
                         <p><i>/msc.c [unknown]</i></p>
                         <p><i>/msc.vol [0 to 100]</i></p>
+                        <p><i>/msc.rep [true/false]</i></p>
                         <p><i>/fnt [color]</i></p>
                         <p><strong>Extra Color Options: [var(x)]</strong><i> --base-clr, --hover-clr, --hover-clr2, --accent-clr or --text-clr</i></p>
                         <h1>Developer Commands???</h1>
@@ -83,9 +84,31 @@
                     </div>
                 </div>
             </div>
-            <div id="MusicPlayer" onclick="BGM()">
-                <audio id="Music" src="Library/Audio/bgm 01.mp3"></audio>
-                <p>Music</p>
+            <div id="Notif">
+                <h1><strong>Notifications</strong></h1>
+                <p><strong>Notification's apear here.</strong></p>
+                <hr>
+                <div>
+                    <p>It is recomended for you to visit this site in Fullscreen Mode and Desktop!</p>
+                </div>
+                <hr>
+                <div>
+                    <p>This website is still in development. Reporting bugs will help the lone developer improve!</p>
+                </div>
+                <hr>
+            </div>
+            <div id="MusicPlayer">
+                <audio id="Music" src="Library/Audio/bgm 01.mp3" onended=onEnded()></audio>
+                <h1><strong>Music Player</strong></h1>
+                <img src="Library/Icon/Audio.png" alt="Playing..." width="125" height="125">
+                <p><strong>Song</strong></p>
+                <div>
+                    <img src="Library/Icon/Repeat.png" alt="" onclick="Repeat()" width="35px" height="35px">
+                    <img src="Library/Icon/Back.png" alt="Back" onclick="BGMB()" width="35px" height="35px">
+                    <img src="Library/Icon/Resume.png" alt="Play/Pause" onclick="BGM()" width="35px" height="35px">
+                    <img src="Library/Icon/Forward.png" alt="Forward" onclick="BGMF()" width="35px" height="35px">
+                    <img src="Library/Icon/LowVolume.png" alt="" id="Vol" onclick="Volume()" width="35px" height="35px">
+                </div>
             </div>
             <div id="Taskbar">
                 <div>
@@ -95,6 +118,10 @@
                     <img src="Library/Icon/TextDocument.png" alt="Commands.txt" onclick=TextDocument() width="35px" height="35px">
                     <img src="Library/Icon/Browser.png" alt="Browser" onclick=Browser() width="35px" height="35px">
                     <img src="Library/Icon/Game.png" alt="Game" onclick=Game() width="35px" height="35px">
+                </div>
+                <div>
+                    <img src="Library/Icon/Music.png" alt="Muisc" onclick=Music() width="35px" height="35px">
+                    <img src="Library/Icon/Notification.png" alt="Notification" onclick=Notif() width="35px" height="35px">
                 </div>
             </div>
         </div>

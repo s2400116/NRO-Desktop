@@ -6,14 +6,16 @@
     </header>
     <body>
         <div id="Home">
-            <img src="Library/Icon/icons8-back-100.png" alt="Back" width="25px" height="25px">
-            <img src="Library/Icon/icons8-forward-100.png" alt="Forward" width="25px" height="25px">
-            <img src="Library/Icon/icons8-chevron-up-100.png" alt="Up" width="25px" height="25px">
-            <img src="Library/Icon/icons8-rotate-right-100.png" alt="Refresh" width="25px" height="25px">
-            <img src="Library/Icon/icons8-home-page-100.png" id="HomeButton" alt="Refresh" width="25px" height="25px">
+            <img src="Library/Icon/Back.png" alt="Back" width="25px" height="25px">
+            <img src="Library/Icon/Forward.png" alt="Forward" width="25px" height="25px">
+            <img src="Library/Icon/Up.png" alt="Up" width="25px" height="25px">
+            <a href="index.html">
+                <img src="Library/Icon/Refresh.png" alt="Refresh" width="25px" height="25px">
+            </a>
+            <img src="Library/Icon/Home.png" id="HomeButton" alt="Refresh" width="25px" height="25px">
             <input type="text" id="addressBar" placeholder="Address" value="Desktop / Courses /">
             <div>
-                <img src="Library/Icon/icons8-search-100.png" id="RefreshButton" alt="Search" width="25px" height="25px">
+                <img src="Library/Icon/Search.png" id="RefreshButton" alt="Search" width="25px" height="25px">
                 <input type="text" id="searchBar" placeholder="Search">
             </div>
         </div>
@@ -38,8 +40,16 @@
                     </a>
                 </ul>
             </nav>
-            <div>
+            <div id="Files">
                 Body
+            </div>
+            <div id="Details">
+                <img src="Library/Preview/Python Code Preview.png" alt="" width="100%">
+                <h3>Python.py</h3>
+                <div>
+                    <p ondblclick="Run()">Run</p>
+                    <p ondblclick="Download()">Download</p>
+                </div>
             </div>
         </div>
         <div id="ContextMenu">
@@ -53,6 +63,30 @@
                 <hr>
                 <li>Show more options</li>
             </ul>
+        </div>
+        <div id="Console">
+            <div id="CHead">
+                <nav>
+                    <img src="Library/Icon/CMD.png" class="TxtDoc" alt="Commands.txt" width="23px" height="23px">
+                    <p>Console</p>
+                </nav>
+                <div>   
+                    <ul>
+                        <li>🟢</li>
+                        <li>🟡⁠</li>
+                        <li onclick=Close()>🔴</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="CBody">
+                <p>Output 3</p>
+                <p>Output 2</p>
+                <p>Output 1</p>
+            </div>
+            <hr>
+            <div id="CInput">
+                <input type="text" id="Input" placeholder="Input: ">
+            </div>
         </div>
     </body>
 </html>

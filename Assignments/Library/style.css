@@ -1,14 +1,16 @@
 :root {
     --base-clr: rgb(30, 30, 30);
-    --base-clr2: rgb(50, 50, 50);
+    --base-clr2: rgb(35, 35, 35);
+    --base-clr3: rgb(50, 50, 50);
     --hover-clr: #ccc;
     --accent-clr: #ebebeb;
     --text-clr: #e6e6e6;
+    --text-clr2: #000000;
     --hover-clr2: rgba( 255, 255, 255, 0.15 );
 }
 
 body {
-    background-color: var(--base-clr2);
+    background-color: var(--base-clr3);
     overflow: hidden;
     user-select: none;
     font-family: 'Segoe UI';
@@ -18,7 +20,7 @@ body {
 }
 #Home {
     display: flex;
-    background-color: var(--base-clr2);
+    background-color: var(--base-clr3);
     padding: 5px 15px;
 }
 #Home img {
@@ -67,11 +69,11 @@ body {
     display: flex;
 }
 #Body nav {
-    width: 15%;
+    width: 16%;
     height: 567px;
     padding: 10px;
-    border: 3px solid var(--base-clr2);
-    background-color: var(--base-clr);
+    border: 3px solid var(--base-clr3);
+    background-color: var(--base-clr2);
     border-radius: 10px;
 }
 #Body nav p{
@@ -92,18 +94,111 @@ body {
     text-decoration: none;
     color: var(--text-clr);
 }
-
-
-#Body div {
-    width: 100%;
+#Files {
+    width: 65%;
     height: 567px;
     padding: 10px;
-    border: 3px solid var(--base-clr2);
+    border: 3px solid var(--base-clr3);
     background-color: var(--base-clr);
     border-radius: 10px;
 }
-
-
+#Details {
+    width: 25%;
+    height: 567px;
+    padding: 10px;
+    border: 3px solid var(--base-clr3);
+    background-color: var(--base-clr2);
+    border-radius: 10px;
+    justify-items: center;
+}
+#Details img {
+    background-color: var(--base-clr);
+    border: 2px solid var(--accent-clr);
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+#Details h3 {
+    margin: 5px;
+}
+#Details div {
+    justify-items: center;
+}
+#Details div p {
+    margin: 5px;
+    color: yellowgreen;
+}
+#Console {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 22.5%;
+    width: 40%;
+    background-color: var(--base-clr2);
+    border: 1px solid var(--text-clr);
+}
+#Console hr {
+    margin: 0px 10px;
+}
+#CHead {
+    padding: 5px;
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    color: var(--text-clr2);
+}
+#CHead img {
+    padding-right: 10px;
+}
+#CHead nav {
+    padding: 4px;
+    display: flex;
+}
+#CHead nav img {
+    padding-right: 10px;
+}
+#CHead nav p {
+    margin: 0;
+}
+#CHead div {
+    padding: 5px;
+    margin-left: auto;
+}
+#CHead p {
+    margin: 0;
+}
+#CHead div ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#CHead div ul li {
+    cursor: pointer;
+    margin-left: 10px;
+}
+#CBody {
+    color: yellowgreen;
+    padding: 1.5%;
+}
+#CBody p {
+    margin: 0;
+}
+#CInput {
+    position: absolute;
+    bottom: 0;
+    color: var(--text-clr);
+}
+#CInput input {
+    width: 470px;
+    margin: 0 10px;
+    padding: 1px 10px;
+    background-color: var(--base-clr2);
+    border: none;
+    color: var(--text-clr);
+    font-size: 17px;
+}
+#CInput input:focus {
+    outline: none;
+}
 
 #ContextMenu {
     position: absolute;
