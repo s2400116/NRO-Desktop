@@ -1,8 +1,8 @@
 <html>
     <header>
-        <title>Assignments</title>
+        <title>Courses</title>
         <link rel="stylesheet" href="Library/style.css">
-        <!-- <script src="Library/main.js" defer></script> -->
+        <script src="Library/main.js" defer></script>
     </header>
     <body>
         <div id="Home">
@@ -12,10 +12,10 @@
             <a href="index.html">
                 <img src="Library/Icon/Refresh.png" alt="Refresh" width="25px" height="25px">
             </a>
-            <img src="Library/Icon/Home.png" id="HomeButton" alt="Refresh" width="25px" height="25px">
+            <img src="Library/Icon/Home.png" id="HomeButton" alt="Home" width="25px" height="25px">
             <input type="text" id="addressBar" placeholder="Address" value="Desktop / Courses /">
             <div>
-                <img src="Library/Icon/Search.png" id="RefreshButton" alt="Search" width="25px" height="25px">
+                <img src="Library/Icon/Search.png" id="SearchButton" alt="Search" width="25px" height="25px">
                 <input type="text" id="searchBar" placeholder="Search">
             </div>
         </div>
@@ -30,24 +30,76 @@
                         <li>Foundations of Computing</li>
                     </a>
                     <a href="Courses/PoP.html">
-                        <li>Princples of Programming</li>
+                        <li>Principles of Programming</li>
                     </a>
                     <a href="Courses/WDD.html">
                         <li>Web Development and Databases</li>
                     </a>
                     <a href="Courses/AI.html">
-                        <li>Artificial Inteligence</li>
+                        <li>Artificial Intelligence</li>
                     </a>
                 </ul>
             </nav>
             <div id="Files">
-                Body
+                <div onclick="Select('.F ...')">
+                    <img src="Library/Icon/Folder.png" alt="..." width="25px" height="25px">
+                    <p>| ...</p>
+                </div>
+                <div onclick="Select('.F Computer System Architechure')">
+                    <img src="Library/Icon/Folder.png" alt="Computer System Architechure" width="25px" height="25px">
+                    <a href="Courses/CSA.html">
+                        <p>| Computer System Architechure</p>
+                    </a>
+                </div>
+                <div onclick="Select('.F Foundations of Computing')">
+                    <img src="Library/Icon/Folder.png" alt="Foundations of Computing" width="25px" height="25px">
+                    <a href="Courses/FoC.html">
+                        <p>| Foundations of Computing</p>
+                    </a>
+                </div>
+                <div onclick="Select('.F Principles of Programming')">
+                    <img src="Library/Icon/Folder.png" alt="Principles of Programming" width="25px" height="25px">
+                    <a href="Courses/PoP.html">
+                        <p>| Principles of Programming</p>
+                    </a>
+                </div>
+                <div onclick="Select('.F Web Development and Databases')">
+                    <img src="Library/Icon/Folder.png" alt="Web Development and Databases" width="25px" height="25px">
+                    <a href="Courses/WDD.html">
+                        <p>| Web Development and Databases</p>
+                    </a>
+                </div>
+                <div onclick="Select('.F Artificial Intelligence')">
+                    <img src="Library/Icon/Folder.png" alt="Artificial Intelligence" width="25px" height="25px">
+                    <a href="Courses/AI.html">
+                        <p>| Artificial Intelligence</p>
+                    </a>
+                </div>
+                <div onclick="Select('.I Version 0.png')">
+                    <img src="Library/Icon/Image.png" alt="Version 0.png" width="25px" height="25px">
+                    <p>| Version 0.png</p>
+                </div>
+                <div onclick="Select('.I Version 1.png')">
+                    <img src="Library/Icon/Image.png" alt="Version 1.png" width="25px" height="25px">
+                    <p>| Version 1.png</p>
+                </div>
+                <div onclick="Select('.I Version 2.png')">
+                    <img src="Library/Icon/Image.png" alt="Version 2.png" width="25px" height="25px">
+                    <p>| Version 2.png</p>
+                </div>
+                <div onclick="Select('.I Version 3.png')">
+                    <img src="Library/Icon/Image.png" alt="Version 3.png" width="25px" height="25px">
+                    <p>| Version 3.png</p>
+                </div>
             </div>
             <div id="Details">
-                <img src="Library/Preview/Python Code Preview.png" alt="" width="100%">
-                <h3>Python.py</h3>
+                <div id="Icon">
+                    <img src="Library/Icon/Folder.png" alt="" id="Ico">
+                </div>
+                <img src="Library/Preview/Folder.png" alt="" id="Photo">
+                <h3 id="fileName">...</h3>
                 <div>
-                    <p ondblclick="Run()">Run</p>
+                    <p ondblclick="Open()">Open</p>
                     <p ondblclick="Download()">Download</p>
                 </div>
             </div>
@@ -63,30 +115,6 @@
                 <hr>
                 <li>Show more options</li>
             </ul>
-        </div>
-        <div id="Console">
-            <div id="CHead">
-                <nav>
-                    <img src="Library/Icon/CMD.png" class="TxtDoc" alt="Commands.txt" width="23px" height="23px">
-                    <p>Console</p>
-                </nav>
-                <div>   
-                    <ul>
-                        <li>🟢</li>
-                        <li>🟡⁠</li>
-                        <li onclick=Close()>🔴</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="CBody">
-                <p>Output 3</p>
-                <p>Output 2</p>
-                <p>Output 1</p>
-            </div>
-            <hr>
-            <div id="CInput">
-                <input type="text" id="Input" placeholder="Input: ">
-            </div>
         </div>
     </body>
 </html>

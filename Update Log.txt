@@ -7,21 +7,27 @@ Version 1.02.00 – Background Music System - 13 March 2025
 1. 	Added a background music player with playback controls.
 2. 	Enabled users to toggle music on/off for a personalized experience.
 3. 	Implemented seamless looping and volume adjustments.
+4. 	General code improvements and optimizations.
 
 Version 1.03.00 – Folder System (Partial Implementation) - 27 March 2025
 1. 	Introduced a Folder UI system for organizing and accessing course materials.
 2. 	Implemented basic folder navigation.
 3. 	Designed a structured layout for easy browsing of uploaded files.
 4. 	Work-in-progress: Full folder system to be completed in future updates.
+5. 	General code improvements and optimizations.
 
-Version 1.03.01 – Music Player Expansion & UI Enhancements (4 April 2025)
+Version 1.03.01 – Music Player Expansion & UI Enhancements - 4 April 2025
 1. 	Added advanced Music Player controls: Skip Forward, Skip Back, Play, Pause, Repeat, and Volume.
 2. 	Introduced Folder Detail section for additional file/folder information.
 3. 	Added a CMD Console window for command-line-style interaction.
 4. 	Implemented a Notification Tab in the taskbar.
 5. 	General code improvements and optimizations.
 
+Version 1.03.02 – Full Folder System & File Types - 7 April 2025
+1.	Completed the Folder System with support for various file types including .py, .png, and folders.
+2.	Expanded the Folder Detail section with more comprehensive file/folder info.
+3.	General code improvements and optimizations.
+
 Planned Updates:
--	Version 1.03.XX – Complete the Folder System.
--	Version 1.0X.XX – Add the ability to run Python scripts and open hosted websites.
+-	Version 1.04.00 – Add the ability to run Python scripts and open hosted websites.
 -	Version 1.0X.XX – Upload all college assignments to the site.

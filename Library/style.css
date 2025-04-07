@@ -97,6 +97,17 @@ body {
     cursor: pointer;
     margin-right: 5px;
 }
+#Taskbar div input {
+    color: var(--text-clr);
+    border: 1px solid var(--hover-clr1);
+    background: var(--hover-clr2);
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    font-family: 'Fira Code', monospace;
+}
+#Taskbar div input::placeholder {
+    color: var(--text-clr);
+}
 #SearchBar {
     position: relative;
     top: -12px;
@@ -181,12 +192,6 @@ iframe {
     -webkit-backdrop-filter: blur( 5px );
     z-index: 999;
 }
-#MusicPlayer h1 {
-    position: fixed;
-    right: 14.5vh;
-    bottom: 22vh;
-    font-size: 23px;
-}
 #MusicPlayer p {
     margin: 0;
     margin-bottom: 10px;
@@ -204,15 +209,16 @@ iframe {
     padding: 2px 10px;
     border: 1px solid var(--hover-clr1);
     background: var(--hover-clr2);
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index: 999;
 }
-#Notif h1 {
-    position: fixed;
-    right: 20vh;
-    bottom: 45vh;
+#Notif h1, #MusicPlayer h1 {
+    position: absolute;
+    top: -32px;
+    left: 0;
     font-size: 23px;
+    margin: 0;
 }
 #Notif p {
     text-align: center;

@@ -43,21 +43,22 @@ body {
     font-weight: bold;
     border: 1px solid var(--hover-clr);
     border-radius: 5px;
+    font-family: 'Fira Code', monospace;
 }
 #Home input::placeholder {
     font-weight: bold;
     color: var(--hover-clr);
 }
-#HomeButton, #RefreshButton {
+#HomeButton, #SearchButton {
     position: absolute;
     left: 16%;
     cursor: pointer;
 }
-#RefreshButton {
+#SearchButton {
     position: absolute;
-    left: 79.3%;
+    left: 80.5%;
 }
-#Home div {
+#Home div:last-child {
     margin-left: auto;
     display: flex;
     justify-content: end;
@@ -84,15 +85,15 @@ body {
     padding: 5px;
     margin: 0;
 }
-#Body nav ul a {
+a {
     text-decoration: none;
+    color: var(--text-clr);
 }
 #Body nav ul li, #Body nav ul a li {
     margin: 5px 0px;
     cursor: pointer;
     font-size: 12px;
     text-decoration: none;
-    color: var(--text-clr);
 }
 #Files {
     width: 65%;
@@ -101,6 +102,23 @@ body {
     border: 3px solid var(--base-clr3);
     background-color: var(--base-clr);
     border-radius: 10px;
+}
+#Files div {
+    display: flex;
+    margin: 5px 0px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+#Files div:hover {
+    border: 1px solid var(--base-clr3);
+    background-color: var(--hover-clr2);
+    border-radius: 10px;
+}
+#Files div img {
+    margin-right: 10px;
+}
+#Files div p {
+    margin: 0;
 }
 #Details {
     width: 25%;
@@ -111,13 +129,25 @@ body {
     border-radius: 10px;
     justify-items: center;
 }
-#Details img {
+#Photo {
+    display: none;
     background-color: var(--base-clr);
     border: 2px solid var(--accent-clr);
     border-radius: 10px;
     margin-bottom: 0px;
+    width: 100%;
+}
+#Details div:first-child {
+    background-color: var(--base-clr);
+    border: 2px solid var(--accent-clr);
+    border-radius: 10px;
+    margin-bottom: 0px;
+    width: 100%;
+    min-height: 153px;
+    align-content: center;
 }
 #Details h3 {
+    text-align: center;
     margin: 5px;
 }
 #Details div {
@@ -127,11 +157,18 @@ body {
     margin: 5px;
     color: yellowgreen;
 }
+#Ico {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+    max-height: 100px;
+}
 #Console {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    height: 22.5%;
+    height: 21%;
     width: 40%;
     background-color: var(--base-clr2);
     border: 1px solid var(--text-clr);
@@ -178,6 +215,7 @@ body {
 #CBody {
     color: yellowgreen;
     padding: 1.5%;
+    font-family: 'Fira Code', monospace;
 }
 #CBody p {
     margin: 0;
@@ -194,6 +232,7 @@ body {
     background-color: var(--base-clr2);
     border: none;
     color: var(--text-clr);
+    font-family: 'Fira Code', monospace;
     font-size: 17px;
 }
 #CInput input:focus {

@@ -40,7 +40,6 @@ function executeCommand(command) {
     } else if (command.startsWith("/msc.vol")) {
         let varVolume = command.replace("/msc.vol", "").trim();
         music.volume = parseFloat(varVolume/100);
-        console.log(music.volume)
         Song()
     } else if (command.startsWith("/msc.c")) {
         let trackNumber = command.replace("/msc.c", "").trim();
@@ -48,8 +47,8 @@ function executeCommand(command) {
     } else if (command.startsWith("/msc.rep")) {
         repeat = command.replace("/msc.rep", "").trim();
     } else if (command.startsWith("/msc.l")) {
-        temp += "L"
-        console.log (temp)
+        let trackNumber = temp + "L"
+        changeMusic(trackNumber);
     } else {
         alert("Unknown command: " + command);
     }
@@ -64,6 +63,7 @@ function changeFont(varColor){
     document.body.style.color = varColor
 }
 function onEnded() {
+    temp = temp.replace("L", "").trim();
     setTimeout(() => {
         if (repeat == "false") {
             temp++
@@ -116,7 +116,6 @@ function Volume() {
     }
     music.volume = changeVolume
     Song()
-    console.log("Volume", music.volume)
 }
 function Song() {
     let vol = document.getElementById("Vol")
