@@ -1,4 +1,5 @@
-<html>
+<!-- <!DOCTYPE html> -->
+<html lang="en">
     <head>
         <title>NRO | Desktop</title>
         <meta property="og:title" content="NRO | Desktop">
@@ -8,30 +9,31 @@
         <link rel="icon" href="Library/Icon/Home.png">
         <link rel="stylesheet" href="Library/style.css">
         <script src="Library/main.js" defer></script>
+        <script src="Assignments/Library/main.js" defer></script>
     </head><body>
         <div id="Desktop">
             <div class="Folders">
-                <img src="Library/Icon/Trash.png" alt="Trash" width="40px" height="40px">
+                <img src="Library/Icon/Trash.png" alt="Trash" width="40" height="40">
                 <p>Trash</p>
             </div>
             <div class="Folders" ondblclick="Folder()">
-                <img src="Library/Icon/Folder.png" alt="Folder" width="40px" height="40px">
-                <p>Folder</p>
+                <img src="Library/Icon/Folder.png" alt="Courses" width="40" height="40">
+                <p>Courses</p>
             </div>
             <div class="Folders">
-                <img src="Library/Icon/Setting.png" alt="Setting" width="40px" height="40px">
+                <img src="Library/Icon/Setting.png" alt="Setting" width="40" height="40">
                 <p>Setting</p>
             </div>
             <div class="Folders" ondblclick=TextDocument()>
-                <img src="Library/Icon/TextDocument.png" alt="Commands.txt" width="40px" height="40px">
+                <img src="Library/Icon/TextDocument.png" alt="Commands.txt" width="40" height="40">
                 <p>Comm...</p>
             </div>
             <div class="Folders" ondblclick=Browser()>
-                <img src="Library/Icon/Browser.png" alt="Browser" width="40px" height="40px">
+                <img src="Library/Icon/Browser.png" alt="Browser" width="40" height="40">
                 <p>Brows...</p>
             </div>
             <div class="Folders" ondblclick=Game()>
-                <img src="Library/Icon/Game.png" alt="Game.exe" width="40px" height="40px">
+                <img src="Library/Icon/Game.png" alt="Game.exe" width="40" height="40">
                 <p>Game</p>
             </div>
             <div id="ContextMenu">
@@ -48,24 +50,24 @@
             <div id="Application">
                 <div id="AppHeader">
                     <nav>
-                        <img src="Library/Icon/TextDocument.png" class="TxtDoc" alt="Commands.txt" width="23px" height="23px">
+                        <img src="Library/Icon/TextDocument.png" class="TxtDoc" alt="Commands.txt" width="23" height="23">
                         <p class="TxtDoc">Commands.txt</p> 
-                        <img src="Library/Icon/Browser.png" class="Bro" alt="Commands.txt" width="23px" height="23px">
+                        <img src="Library/Icon/Browser.png" class="Bro" alt="Commands.txt" width="23" height="23">
                         <p class="Bro">Browser</p> 
-                        <img src="Library/Icon/Game.png" class="Game" alt="Commands.txt" width="23px" height="23px">
+                        <img src="Library/Icon/Game.png" class="Game" alt="Commands.txt" width="23" height="23">
                         <p class="Game">Game</p> 
-                        <img src="Library/Icon/Folder.png" class="Folder" alt="Folder" width="23px" height="23px">
-                        <p class="Folder">Folder</p> 
+                        <img src="Library/Icon/Folder.png" class="Folder" alt="Folder" width="23" height="23">
+                        <p class="Folder">Courses</p> 
                     </nav>
                     <div>
                         <ul>
                             <li>🟢</li>
                             <li>🟡⁠</li>
-                            <li onclick=Close()>🔴</li>
+                            <li onclick=CloseA()>🔴</li>
                         </ul>
                     </div>
                 </div>
-                <iframe src="https://www.webcrawler.com/" frameborder="0" class="Bro"></iframe>
+                <iframe src="https://www.webcrawler.com/" frameborder="0" class="Bro" id="HTML"></iframe>
                 <iframe src="Games/index.html" frameborder="0" class="Game"></iframe>
                 <iframe src="Assignments/index.html" frameborder="0" class="Folder"></iframe>
                 <div id="AppBody">
@@ -103,25 +105,25 @@
                 <img src="Library/Icon/Audio.png" alt="Playing..." width="125" height="125">
                 <p><strong>Song</strong></p>
                 <div>
-                    <img src="Library/Icon/Repeat.png" alt="" onclick="Repeat()" width="35px" height="35px">
-                    <img src="Library/Icon/Back.png" alt="Back" onclick="BGMB()" width="35px" height="35px">
-                    <img src="Library/Icon/Resume.png" alt="Play/Pause" onclick="BGM()" width="35px" height="35px">
-                    <img src="Library/Icon/Forward.png" alt="Forward" onclick="BGMF()" width="35px" height="35px">
-                    <img src="Library/Icon/LowVolume.png" alt="" id="Vol" onclick="Volume()" width="35px" height="35px">
+                    <img src="Library/Icon/Repeat.png" alt="" onclick="Repeat()" width="35" height="35">
+                    <img src="Library/Icon/Back.png" alt="Back" onclick="BGMB()" width="35" height="35">
+                    <img src="Library/Icon/Resume.png" alt="Play/Pause" onclick="BGM()" width="35" height="35">
+                    <img src="Library/Icon/Forward.png" alt="Forward" onclick="BGMF()" width="35" height="35">
+                    <img src="Library/Icon/LowVolume.png" alt="" id="Vol" onclick="Volume()" width="35" height="35">
                 </div>
             </div>
             <div id="Taskbar">
                 <div>
-                    <img src="Library/Icon/Home.png" alt="Home" width="35px" height="35px">
-                    <img src="Library/Icon/Explore.png" alt="Explore" width="35px" height="35px">
-                    <input type="text" id="searchBar" placeholder="/commands">
-                    <img src="Library/Icon/TextDocument.png" alt="Commands.txt" onclick=TextDocument() width="35px" height="35px">
-                    <img src="Library/Icon/Browser.png" alt="Browser" onclick=Browser() width="35px" height="35px">
-                    <img src="Library/Icon/Game.png" alt="Game" onclick=Game() width="35px" height="35px">
+                    <img src="Library/Icon/Home.png" alt="Home" width="35" height="35">
+                    <img src="Library/Icon/Explore.png" alt="Explore" width="35" height="35">
+                    <input type="text" id="SearchBar" placeholder="/commands">
+                    <img src="Library/Icon/TextDocument.png" alt="Commands.txt" onclick=TextDocument() width="35" height="35">
+                    <img src="Library/Icon/Browser.png" alt="Browser" onclick=Browser() width="35" height="35">
+                    <img src="Library/Icon/Game.png" alt="Game" onclick=Game() width="35" height="35">
                 </div>
                 <div>
-                    <img src="Library/Icon/Music.png" alt="Muisc" onclick=Music() width="35px" height="35px">
-                    <img src="Library/Icon/Notification.png" alt="Notification" onclick=Notif() width="35px" height="35px">
+                    <img src="Library/Icon/Music.png" alt="Muisc" onclick=Music() width="35" height="35">
+                    <img src="Library/Icon/Notification.png" alt="Notification" onclick=Notif() width="35" height="35">
                 </div>
             </div>
         </div>

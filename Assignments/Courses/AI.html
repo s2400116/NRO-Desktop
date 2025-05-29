@@ -3,23 +3,24 @@
         <title>Artificial Intelligence</title>
         <link rel="stylesheet" href="../Library/style.css">
         <script src="../Library/main.js" defer></script>
+        <script id="Script"></script>
     </header>
     <body>
         <div id="Home">
             <a href="../index.html">
-                <img src="../Library/Icon/Back.png" alt="Back" width="25px" height="25px">
+                <img src="../Library/Icon/Back.png" alt="Back" width="25" height="25">
             </a>
-            <img src="../Library/Icon/Forward.png" alt="Forward" width="25px" height="25px">
+            <img src="../Library/Icon/Forward.png" alt="Forward" width="25" height="25">
             <a href="../index.html">
-                <img src="../Library/Icon/Up.png" alt="Up" width="25px" height="25px">
+                <img src="../Library/Icon/Up.png" alt="Up" width="25" height="25">
             </a>
             <a href="AI.html">
-                <img src="../Library/Icon/Refresh.png" alt="Refresh" width="25px" height="25px">
+                <img src="../Library/Icon/Refresh.png" alt="Refresh" width="25" height="25">
             </a>
-            <img src="../Library/Icon/Home.png" id="HomeButton" alt="Home" width="25px" height="25px">
+            <img src="../Library/Icon/Home.png" id="HomeButton" alt="Home" width="25" height="25">
             <input type="text" id="addressBar" placeholder="Address" value="Desktop / Courses / Artificial Intelligence /">
             <div>
-                <img src="../Library/Icon/Search.png" id="SearchButton" alt="Search" width="25px" height="25px">
+                <img src="../Library/Icon/Search.png" id="SearchButton" alt="Search" width="25" height="25">
                 <input type="text" id="searchBar" placeholder="Search">
             </div>
         </div>
@@ -46,22 +47,22 @@
             </nav>
             <div id="Files">
                 <div onclick="Select('.f ...')">
-                    <img src="../Library/Icon/Folder.png" alt="..." width="25px" height="25px">
+                    <img src="../Library/Icon/Folder.png" alt="..." width="25" height="25">
                     <a href="../index.html">
                         <p>| ...</p>
                     </a>
                 </div>
                 <div onclick="Select('.p Python1.py')">
-                    <img src="../Library/Icon/Python.png" alt="Python1" width="25px" height="25px">
-                    <p>| Python1.py</p>
+                    <img src="../Library/Icon/Python.png" alt="Python1" width="25" height="25">
+                    <p ondblclick="Open()">| Python1.py</p>
                 </div>
                 <div onclick="Select('.p Python2.py')">
-                    <img src="../Library/Icon/Python.png" alt="Python2" width="25px" height="25px">
-                    <p>| Python2.py</p>
+                    <img src="../Library/Icon/Python.png" alt="Python2" width="25" height="25">
+                    <p ondblclick="Open()">| Python2.py</p>
                 </div>
                 <div onclick="Select('.p Python3.py')">
-                    <img src="../Library/Icon/Python.png" alt="Python3" width="25px" height="25px">
-                    <p>| Python3.py</p>
+                    <img src="../Library/Icon/Python.png" alt="Python3" width="25" height="25">
+                    <p ondblclick="Open()">| Python3.py</p>
                 </div>
             </div>
             <div id="Details">
@@ -69,9 +70,9 @@
                     <img src="../Library/Icon/Folder.png" alt="" id="Ico">
                 </div>
                 <img src="../Library/Preview/Folder.png" alt="" id="Photo">
-                <h3 id="fileName">...</h3>
+                <h3 id="FileName">...</h3>
                 <div>
-                    <p ondblclick="Open()">Open</p>
+                    <p onclick="Open()">Open</p>
                     <p ondblclick="Download()">Download</p>
                 </div>
             </div>
@@ -91,7 +92,7 @@
         <div id="Console">
             <div id="CHead">
                 <nav>
-                    <img src="../Library/Icon/CMD.png" class="TxtDoc" alt="Commands.txt" width="23px" height="23px">
+                    <img src="../Library/Icon/CMD.png" class="TxtDoc" alt="Commands.txt" width="23" height="23">
                     <p>Console</p>
                 </nav>
                 <div>   

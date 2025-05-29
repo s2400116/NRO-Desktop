@@ -1,21 +1,23 @@
 <html>
     <header>
-        <title>Courses</title>
+        <title id="Subject">Courses</title>
         <link rel="stylesheet" href="Library/style.css">
         <script src="Library/main.js" defer></script>
+        <script src="/Assignments/Library/main.js" defer></script>
+        <p id="Domain">MainDomain</p>
     </header>
     <body>
         <div id="Home">
-            <img src="Library/Icon/Back.png" alt="Back" width="25px" height="25px">
-            <img src="Library/Icon/Forward.png" alt="Forward" width="25px" height="25px">
-            <img src="Library/Icon/Up.png" alt="Up" width="25px" height="25px">
+            <img src="Library/Icon/Back.png" alt="Back" width="25" height="25">
+            <img src="Library/Icon/Forward.png" alt="Forward" width="25" height="25">
+            <img src="Library/Icon/Up.png" alt="Up" width="25" height="25">
             <a href="index.html">
-                <img src="Library/Icon/Refresh.png" alt="Refresh" width="25px" height="25px">
+                <img src="Library/Icon/Refresh.png" alt="Refresh" width="25" height="25">
             </a>
-            <img src="Library/Icon/Home.png" id="HomeButton" alt="Home" width="25px" height="25px">
+            <img src="Library/Icon/Home.png" id="HomeButton" alt="Home" width="25" height="25">
             <input type="text" id="addressBar" placeholder="Address" value="Desktop / Courses /">
             <div>
-                <img src="Library/Icon/Search.png" id="SearchButton" alt="Search" width="25px" height="25px">
+                <img src="Library/Icon/Search.png" id="SearchButton" alt="Search" width="25" height="25">
                 <input type="text" id="searchBar" placeholder="Search">
             </div>
         </div>
@@ -41,63 +43,79 @@
                 </ul>
             </nav>
             <div id="Files">
-                <div onclick="Select('.F ...')">
-                    <img src="Library/Icon/Folder.png" alt="..." width="25px" height="25px">
+                <div onclick="Select('.f ...')">
+                    <img src="Library/Icon/PrevFolder.png" alt="..." width="25" height="25">
                     <p>| ...</p>
                 </div>
                 <div onclick="Select('.F Computer System Architechure')">
-                    <img src="Library/Icon/Folder.png" alt="Computer System Architechure" width="25px" height="25px">
+                    <img src="Library/Icon/Folder.png" alt="Computer System Architechure" width="25" height="25">
                     <a href="Courses/CSA.html">
                         <p>| Computer System Architechure</p>
                     </a>
                 </div>
                 <div onclick="Select('.F Foundations of Computing')">
-                    <img src="Library/Icon/Folder.png" alt="Foundations of Computing" width="25px" height="25px">
+                    <img src="Library/Icon/Folder.png" alt="Foundations of Computing" width="25" height="25">
                     <a href="Courses/FoC.html">
                         <p>| Foundations of Computing</p>
                     </a>
                 </div>
                 <div onclick="Select('.F Principles of Programming')">
-                    <img src="Library/Icon/Folder.png" alt="Principles of Programming" width="25px" height="25px">
+                    <img src="Library/Icon/Folder.png" alt="Principles of Programming" width="25" height="25">
                     <a href="Courses/PoP.html">
                         <p>| Principles of Programming</p>
                     </a>
                 </div>
                 <div onclick="Select('.F Web Development and Databases')">
-                    <img src="Library/Icon/Folder.png" alt="Web Development and Databases" width="25px" height="25px">
+                    <img src="Library/Icon/Folder.png" alt="Web Development and Databases" width="25" height="25">
                     <a href="Courses/WDD.html">
                         <p>| Web Development and Databases</p>
                     </a>
                 </div>
                 <div onclick="Select('.F Artificial Intelligence')">
-                    <img src="Library/Icon/Folder.png" alt="Artificial Intelligence" width="25px" height="25px">
+                    <img src="Library/Icon/Folder.png" alt="Artificial Intelligence" width="25" height="25">
                     <a href="Courses/AI.html">
                         <p>| Artificial Intelligence</p>
                     </a>
                 </div>
-                <div onclick="Select('.I Version 0.png')">
-                    <img src="Library/Icon/Image.png" alt="Version 0.png" width="25px" height="25px">
+                <div onclick="Select('.I Version 0.png')" ondblclick="ImageFullScreen()">
+                    <img src="Library/Icon/Image.png" alt="Version 0" width="25" height="25">
                     <p>| Version 0.png</p>
                 </div>
-                <div onclick="Select('.I Version 1.png')">
-                    <img src="Library/Icon/Image.png" alt="Version 1.png" width="25px" height="25px">
+                <div onclick="Select('.I Version 1.png')" ondblclick="ImageFullScreen()">
+                    <img src="Library/Icon/Image.png" alt="Version 1" width="25" height="25">
                     <p>| Version 1.png</p>
                 </div>
-                <div onclick="Select('.I Version 2.png')">
-                    <img src="Library/Icon/Image.png" alt="Version 2.png" width="25px" height="25px">
+                <div onclick="Select('.I Version 2.png')" ondblclick="ImageFullScreen()">
+                    <img src="Library/Icon/Image.png" alt="Version 2" width="25" height="25">
                     <p>| Version 2.png</p>
                 </div>
-                <div onclick="Select('.I Version 3.png')">
-                    <img src="Library/Icon/Image.png" alt="Version 3.png" width="25px" height="25px">
+                <div onclick="Select('.I Version 3.png')" ondblclick="ImageFullScreen()">
+                    <img src="Library/Icon/Image.png" alt="Version 3" width="25" height="25">
                     <p>| Version 3.png</p>
+                </div>
+                <div onclick="Select('.T File.txt')">
+                    <img src="Library/Icon/Text.png" alt="File" width="25" height="25">
+                    <p>| File.txt</p>
+                </div>
+                <div onclick="Select('.H index.html')" ondblclick="HTML()">
+                    <img src="Library/Icon/HTML.png" alt="index" width="25" height="25">
+                    <p>| index.html</p>
+                </div>
+                <div onclick="Select('.C style.css')">
+                    <img src="Library/Icon/CSS.png" alt="style" width="25" height="25">
+                    <p>| style.css</p>
+                </div>
+                <div onclick="Select('.J main.js')">
+                    <img src="Library/Icon/JS.png" alt="main" width="25" height="25">
+                    <p>| main.js</p>
                 </div>
             </div>
             <div id="Details">
                 <div id="Icon">
                     <img src="Library/Icon/Folder.png" alt="" id="Ico">
                 </div>
-                <img src="Library/Preview/Folder.png" alt="" id="Photo">
-                <h3 id="fileName">...</h3>
+                <img src="Library/Preview/Version 0.png" alt="" id="Photo">
+                <h3 id="FileName">...</h3>
                 <div>
                     <p ondblclick="Open()">Open</p>
                     <p ondblclick="Download()">Download</p>
@@ -115,6 +133,24 @@
                 <hr>
                 <li>Show more options</li>
             </ul>
+        </div>
+        <div id="ImageFS">
+            <div id="ImageHead">
+                <nav>
+                    <img src="Library/Icon/CMD.png" class="TxtDoc" alt="Commands.txt" width="23" height="23">
+                    <p>Images</p>
+                </nav>
+                <div>   
+                    <ul>
+                        <li>🟢</li>
+                        <li>🟡⁠</li>
+                        <li onclick=CloseI()>🔴</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="ImageBody">
+                <img src="/Library/Background/Background 02.png" alt="Background" id="ImageSRC">
+            </div>
         </div>
     </body>
 </html>

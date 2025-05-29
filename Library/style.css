@@ -10,8 +10,9 @@
 body {
     background-color: var(--base-clr);
     background-image: url(Background/Background\ 11.png);
-    background-size: 100%;
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     overflow: hidden;
     font-family: 'Segoe UI';
     margin: 0;
@@ -85,7 +86,7 @@ body {
 }
 #Taskbar div:first-child {
     display: flexbox;
-    width: 550;
+    width: 550px;
 }
 #Taskbar div:last-child {
     display: flex;

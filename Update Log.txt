@@ -28,6 +28,14 @@ Version 1.03.02 – Full Folder System & File Types - 7 April 2025
 2.	Expanded the Folder Detail section with more comprehensive file/folder info.
 3.	General code improvements and optimizations.
 
+Version 1.03.03 – Python scripts and Website (Partial Implementation)- 29 May 2025
+1.	Partial Implementation of runing python scripts and open hosted websites.
+2.  Added more Music.
+3.  Added more File types including .txt, .html, .css and .js. (Havent added functionalities yet...)
+4.  Massive code improvements and optimizations.
+
 Planned Updates:
 -	Version 1.04.00 – Add the ability to run Python scripts and open hosted websites.
+-	Version 1.04.XX – Add functionality to all file types.
 -	Version 1.0X.XX – Upload all college assignments to the site.
+-	Version 1.0X.XX – Creating a Figma Page for NRO - Desktop.
